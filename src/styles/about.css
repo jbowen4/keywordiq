@@ -1,0 +1,33 @@
+.about-us {
+  display: flex;
+  width: 800px;
+  margin: auto;
+  gap: 70px;
+  margin-bottom: 100px;
+  line-height: 25px;
+}
+p {
+  line-height: 30px;
+  font-size: 20px;
+}
+.img {
+  width: 5rem;
+}
+.highlight {
+  background-color: #ff0066;
+  color: #fff;
+}
+@media (max-width: 850px) {
+  .about-us {
+    width: 100%;
+    padding: 0 30px;
+    gap: 30px;
+  }
+}
+@media (max-width: 550px) {
+  .about-us {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+}

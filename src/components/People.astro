@@ -1,0 +1,98 @@
+---
+import writer from '../assets/writer.svg';
+import marketing from '../assets/marketing.svg';
+import briefcase from '../assets/briefcase.svg';
+import indiehacker from '../assets/indiehacker.svg';
+import graph from '../assets/graph.svg';
+import '../global.css';
+---
+
+<div class='container'>
+  <h5 class='tag'>Built for you</h5>
+  <h3 class='subhead'>Who can benefit from this?</h3>
+  <div class='people'>
+    <div class='card'>
+      <img class='card-img' src={writer} />
+      <h4>Writers / Bloggers</h4>
+      <p>Find inspiration to create new content that readers will want</p>
+    </div>
+    <div class='card'>
+      <img class='card-img' src={marketing} />
+      <h4>Marketers</h4>
+      <p>Discover new things customers are searching for & leverage it for your products</p>
+    </div>
+    <div class='card'>
+      <img class='card-img' src={indiehacker} />
+      <h4>Indie Hackers</h4>
+      <p>Find inspiration for problems that need solving & products that users need</p>
+    </div>
+    <div class='card'>
+      <img class='card-img' src={briefcase} />
+      <h4>Entrepreneurs</h4>
+      <p>Find inspiration for problems that need solving & products that users need</p>
+    </div>
+    <div class='card'>
+      <img class='card-img' src={graph} />
+      <h4>Anyone interested in trends</h4>
+      <p>Discover trends in user search & behavior patterns</p>
+    </div>
+  </div>
+</div>
+
+<style>
+  .container {
+    width: 1000px;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 100px;
+  }
+
+  .people {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .people h4 {
+    font-size: 25px;
+    margin: 0;
+  }
+  .card {
+    background-color: #ffffff;
+    padding: 20px 20px 10px 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 3px 3px 5px 0px rgba(93, 93, 93, 0.2);
+  }
+
+  .card h4 {
+    margin-top: 10px;
+  }
+  .card-img {
+    width: 5em;
+    fill: #ff0066;
+  }
+  @media (max-width: 1030px) {
+    .container {
+      width: 100%;
+      padding: 50px;
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
+
+  @media (max-width: 750px) {
+    .container {
+      padding: 15px;
+    }
+    .people {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+  }
+
+  @media (max-width: 450px) {
+    .people {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+</style>

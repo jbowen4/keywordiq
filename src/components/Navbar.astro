@@ -1,0 +1,83 @@
+---
+import { Icon } from 'astro-icon';
+import logo from '../assets/logo.svg';
+---
+
+<nav>
+  <div class='container'>
+    <span class='logo'>
+      <img id='logo-img' src={logo} />
+      <h4 id='logo-text'>Keyword IQ</h4>
+    </span>
+    <div class='socials'>
+      <p id='connect'>Connect with us!</p>
+      <Icon pack='mdi' name='twitter' />
+      <Icon pack='mdi' name='linkedin' />
+      <Icon pack='ri' name='product-hunt-fill' />
+    </div>
+  </div>
+</nav>
+
+<style>
+  nav {
+    width: 1000px;
+    margin: auto;
+    padding-top: 30px;
+  }
+
+  #connect {
+    font-weight: bold;
+    margin-right: 5px;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .socials {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .logo {
+    display: flex;
+    gap: 10px;
+  }
+
+  #logo-img {
+    width: 2rem;
+  }
+
+  #logo-text {
+    font-size: 1.3rem;
+    font-family: 'Outfit', 'Figtree', sans-serif;
+    margin: 0;
+    font-weight: bold;
+    letter-spacing: -0.7px;
+  }
+
+  svg {
+    width: 2em;
+    cursor: pointer;
+  }
+
+  svg:hover {
+    color: #ff0066;
+    transform: scale(1.2);
+  }
+
+  @media (max-width: 1100px) {
+    nav {
+      width: 90%;
+    }
+  }
+
+  @media (max-width: 600px) {
+    #connect {
+      display: none;
+    }
+  }
+</style>

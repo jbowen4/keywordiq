@@ -1,0 +1,63 @@
+---
+import { Icon } from 'astro-icon';
+---
+
+<footer>
+  <div class='container'>
+    <h4 id='logo-text'>Keyword IQ</h4>
+    <p>
+      Keyword IQ is a weekly newsletter that features timely high search volume, low competition
+      keywords.
+    </p>
+    <div class='socials'>
+      <Icon pack='mdi' name='twitter' />
+      <Icon pack='mdi' name='linkedin' />
+      <Icon pack='ri' name='product-hunt-fill' />
+    </div>
+    <hr />
+    <p>© 2023 Joshua Bowen. All Rights Reserved</p>
+  </div>
+</footer>
+
+<style>
+  footer {
+    background-color: #000;
+    color: white;
+    padding: 50px 0;
+  }
+  .container {
+    width: 600px;
+    text-align: center;
+    margin: auto;
+  }
+  #logo-text {
+    font-size: 25px;
+    font-family: 'Outfit', 'Figtree', sans-serif;
+    margin: 0;
+    font-weight: bold;
+  }
+  .socials {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+  svg {
+    width: 1.5em;
+    cursor: pointer;
+  }
+  svg:hover {
+    color: #ff0066;
+    transform: scale(1.2);
+  }
+
+  @media (max-width: 700px) {
+    .container {
+      width: 100%;
+      padding: 20px;
+      margin: auto;
+    }
+  }
+</style>

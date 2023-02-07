@@ -1,0 +1,84 @@
+---
+import Lottie from './Lottie';
+import fire from '../assets/fire.json';
+---
+
+<div class='about-us'>
+  <h5 class='tag'>About Us</h5>
+  <h3 class='subhead'>What is Keyword IQ?</h3>
+  <p>
+    Are you looking to reach a massive audience online, but struggling to find the right keywords?
+    Keyword IQ is a <span class='highlight-grey'>weekly newsletter</span> that presents you with an <span
+      class='highlight-grey'>abundance of appealing keywords</span
+    >
+    that have high search volume and are easy to rank for. The process of keyword research can be tedious,
+    but with Keyword IQ, you'll <span class='highlight'>save countless hours of research.</span> Every
+    week, we deliver a <span class='highlight'
+      >rich collection of keywords to inspire and guide</span
+    > your targeting efforts, making your path to online success much smoother.
+  </p>
+  <Lottie animData={fire} client:only='react' />
+</div>
+
+<style>
+  .about-us {
+    width: 800px;
+    margin: auto;
+    gap: 70px;
+    margin-bottom: 100px;
+    line-height: 25px;
+    text-align: center;
+  }
+  p {
+    line-height: 30px;
+    font-size: 20px;
+  }
+  svg {
+    width: 10rem;
+  }
+  .highlight {
+    /* background-color: #ff0066; */
+    background: linear-gradient(to right, #ff0066 50%, #fff 50%);
+    background-size: 200% auto;
+    background-position: 100%;
+    color: #000;
+    animation: addhighlight 10s infinite;
+  }
+  .highlight-grey {
+    /* background-color: #1f2232;
+    color: #fff; */
+    background: linear-gradient(to right, #1f2232 50%, #fff 50%);
+    background-size: 200% auto;
+    background-position: 100%;
+    color: #000;
+    animation: addhighlight 10s infinite;
+  }
+  @keyframes addhighlight {
+    10% {
+      background-position: 0%;
+      color: #fff;
+    }
+    80% {
+      background-position: 0%;
+      color: #fff;
+    }
+    85% {
+      background-position: 100%;
+      color: #000;
+    }
+  }
+  @media (max-width: 850px) {
+    .about-us {
+      width: 100%;
+      padding: 0 30px;
+      gap: 30px;
+    }
+  }
+  @media (max-width: 550px) {
+    .about-us {
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+    }
+  }
+</style>

@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Outfit', sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+body {
+  background-color: #fff;
+}
+
+h1 {
+  font-size: 70px;
+  margin-bottom: 30px;
+  font-weight: 900;
+  margin-top: 5px;
+}
+
+h4 {
+  font-size: 30px;
+  margin-top: 0;
+  font-family: 'Figtree';
+}
+
+.tag {
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #ff0035;
+  margin: 0;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.subhead {
+  font-size: 35px;
+  margin-top: 10px;
+}

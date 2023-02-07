@@ -8,8 +8,8 @@
 
 @font-face {
   font-family: 'Outfit';
-  src: url('/fonts/Outfit-Bold.ttf') format('truetype');
-  font-weight: bold;
+  src: url('/fonts/Outfit-Medium.ttf') format('truetype');
+  font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
@@ -24,9 +24,9 @@
 
 @font-face {
   font-family: 'Figtree';
-  src: url('/fonts/Figtree-Bold.ttf') format('truetype');
-  font-weight: normal;
-  font-style: bold;
+  src: url('/fonts/Figtree-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
   font-display: swap;
 }
 
@@ -46,14 +46,15 @@ body {
 h1 {
   font-size: 70px;
   margin-bottom: 30px;
-  font-weight: 900;
+  font-weight: 500;
   margin-top: 5px;
 }
 
 h4 {
   font-size: 30px;
   margin-top: 0;
-  font-family: 'Figtree';
+  font-family: 'Figtree', 'Outfit';
+  font-weight: 500;
 }
 
 .tag {
@@ -61,7 +62,7 @@ h4 {
   text-transform: uppercase;
   color: #ff0035;
   margin: 0;
-  font-weight: bold;
+  font-weight: normal;
   letter-spacing: 1px;
 }
 
@@ -69,4 +70,5 @@ h4 {
   font-size: 35px;
   margin-top: 10px;
   line-height: 45px;
+  font-weight: 500;
 }

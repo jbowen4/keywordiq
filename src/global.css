@@ -1,3 +1,19 @@
+@font-face {
+  font-family: 'Outfit';
+  src: url('/fonts/Outfit-Regular.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Figtree';
+  src: url('/fonts/Figtree-Regular.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 * {
   box-sizing: border-box;
   font-family: 'Outfit', sans-serif;
@@ -36,4 +52,5 @@ h4 {
 .subhead {
   font-size: 35px;
   margin-top: 10px;
+  line-height: 45px;
 }

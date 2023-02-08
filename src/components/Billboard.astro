@@ -8,6 +8,10 @@ import Form from './Form';
 ---
 
 <div class:list={['top', 'container']}>
+  <div class='modal'>
+    <h4>Success</h4>
+    <div>Message!</div>
+  </div>
   <div class='left'>
     <h5 class='tag'>Keyword Insight Newsletter</h5>
     <h1>
@@ -40,7 +44,7 @@ import Form from './Form';
         pack='ph'
         name='eye-closed-bold'
       />
-      keywords delivered to your inbox for free
+      keywords delivered to your inbox <span class='constant-tilt-shake'>for free</span>
     </h4>
     <form
       data-netlify='true'
@@ -55,7 +59,7 @@ import Form from './Form';
           Don’t fill this out if you’re human: <input name='bot-field' />
         </label>
       </p>
-      <input name='email' type='email' placeholder='Your email address' />
+      <input id='email-field' name='email' type='email' placeholder='Your email address' />
       <input type='hidden' name='form-name' value='email-submission' />
       <button type='submit'>Join <img class='iconStyle' src={icon} /></button>
     </form>
@@ -67,7 +71,78 @@ import Form from './Form';
   </div>
 </div>
 
+<script>
+  //document.getElementById('email-field').value
+</script>
+
 <style>
+  .underline2 {
+    position: relative;
+    z-index: 1;
+  }
+  .underline2:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0.5rem;
+    width: 100%;
+    height: 14px;
+    transform: skew(-12deg);
+    background: rgba(238, 111, 87, 0.5);
+    z-index: -1;
+  }
+  span.constant-tilt-shake {
+    display: inline-block;
+    animation: tilt-shaking 2.33s infinite;
+    font-family: 'Figtree';
+    color: #ff0066;
+  }
+  @keyframes tilt-shaking {
+    0% {
+      transform: translateX(0);
+    }
+    10% {
+      transform: translateY(-4px);
+    }
+    15% {
+      transform: translateY(-4px) rotate(4deg);
+    }
+    25% {
+      transform: translateY(-4px) rotate(-4deg);
+    }
+    35% {
+      transform: translateY(-4px) rotate(4deg);
+    }
+    45% {
+      transform: translateY(-4px) rotate(-4deg);
+    }
+    50% {
+      transform: translateY(0) rotate(0);
+    }
+    100% {
+      transform: translateY(0) rotate(0);
+    }
+  }
+
+  .modal {
+    position: absolute;
+    top: 50px;
+    width: 300px;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    filter: drop-shadow(5px 6px 11px #b1b1b1);
+    display: none;
+  }
+  .modal h4 {
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
   .hidden {
     clip: rect(0 0 0 0);
     clip-path: inset(50%);

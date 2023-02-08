@@ -2,6 +2,7 @@
 import { Icon } from 'astro-icon';
 import emailTemplate from '../assets/template.svg';
 import blob from '../assets/blog.svg';
+import icon from '../assets/right-arrow.svg';
 
 import Form from './Form';
 ---
@@ -15,8 +16,6 @@ import Form from './Form';
       >
     </h1>
     <h4>
-      <!-- 📈 -->
-      <!-- <Icon class='arrow' pack='ic' name='round-keyboard-double-arrow-up' /> -->
       High search volume <Icon
         class='inline-img'
         style={{
@@ -29,10 +28,7 @@ import Form from './Form';
         pack='ic'
         name='round-manage-search'
       />
-      ,
-      <!-- ⬇️ -->
-      <!-- <Icon class='down' pack='ic' name='round-keyboard-double-arrow-down' /> -->
-      low competition <Icon
+      , low competition <Icon
         class='inline-img'
         style={{
           color: '#FF0066',
@@ -46,11 +42,24 @@ import Form from './Form';
       />
       keywords delivered to your inbox for free
     </h4>
-    <!-- <form class='email-input'>
+    <form
+      data-netlify='true'
+      netlify-honeypot
+      data-netlify-honeypot='bot-field'
+      name='email-submission'
+      method='POST'
+      class='email-input'
+    >
+      <p class='hidden'>
+        <label>
+          Don’t fill this out if you’re human: <input name='bot-field' />
+        </label>
+      </p>
       <input type='email' placeholder='Your email address' />
-      <button type='submit'>Join <Icon class='svg' pack='ic' name='round-keyboard-arrow-right' /></button>
-    </form> -->
-    <Form client:only='react' />
+      <input type='hidden' name='form-name' value='email-submission' />
+      <button type='submit'>Join <img class='iconStyle' src={icon} /></button>
+    </form>
+    <!-- <Form client:only='react' /> -->
   </div>
   <div class='right'>
     <img id='blob' src={blob} />
@@ -59,11 +68,29 @@ import Form from './Form';
 </div>
 
 <style>
+  .hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
   .inline-img {
     width: 1em;
     display: inline;
     position: relative;
     top: 0.15em;
+  }
+
+  .iconStyle {
+    width: 0.8em;
+    display: inline;
+    position: relative;
+    top: 0.1em;
+    color: #fff;
+    marginleft: 5px;
   }
 
   .underline {

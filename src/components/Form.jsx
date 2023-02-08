@@ -105,33 +105,35 @@ const Form = () => {
   };
 
   return (
-    <form
-      name='email-submission'
-      ref={formRef}
-      style={formStyle}
-      onSubmit={(e) => validateSubmit(e)}
-      data-netlify='true'
-      data-netlify-honeypot='bot-field'>
-      <input type='hidden' name='form-name' value='email-submission' />
-      <input
-        style={inputStyle}
-        type='email'
-        placeholder='Your email address'
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-      />
-      <button style={btnStyle} type='submit'>
-        Join <img style={iconStyle} src={icon} />
-      </button>
-      <ReCAPTCHA
-        ref={recaptchaRef}
-        size='invisible'
-        sitekey={import.meta.env.PUBLIC_SITE_KEY}
-        badge='bottomright'
-        onChange={() => handleSubmit()}
-      />
-      <ToastContainer />
-    </form>
+    <>
+      <form
+        name='email-submission'
+        ref={formRef}
+        style={formStyle}
+        onSubmit={(e) => validateSubmit(e)}
+        data-netlify='true'
+        data-netlify-honeypot='bot-field'>
+        <input type='hidden' name='form-name' value='email-submission' />
+        <input
+          style={inputStyle}
+          type='email'
+          placeholder='Your email address'
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <button style={btnStyle} type='submit'>
+          Join <img style={iconStyle} src={icon} />
+        </button>
+        <ReCAPTCHA
+          ref={recaptchaRef}
+          size='invisible'
+          sitekey={import.meta.env.PUBLIC_SITE_KEY}
+          badge='bottomright'
+          onChange={() => handleSubmit()}
+        />
+        <ToastContainer />
+      </form>
+    </>
   );
 };
 

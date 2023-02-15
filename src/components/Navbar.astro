@@ -11,12 +11,20 @@ import logo from '../assets/logo.svg';
     </span>
     <div class='socials'>
       <p id='connect'>Connect with us!</p>
-      <Icon pack='mdi' name='twitter' />
-      <Icon pack='mdi' name='linkedin' />
-      <Icon pack='ri' name='product-hunt-fill' />
+      <a href='https://twitter.com/keyword_iq'><Icon pack='mdi' name='twitter' /></a>
+      <a href='https://www.linkedin.com/company/keyword-iq/'><Icon pack='mdi' name='linkedin' /></a>
+      <a href='https://www.producthunt.com/posts/keyword-iq'
+        ><Icon pack='ri' name='product-hunt-fill' /></a
+      >
     </div>
   </div>
 </nav>
+
+<script>
+  function handleClick() {}
+
+  document.querySelector('#connect')!.addEventListener('click', handleClick);
+</script>
 
 <style>
   nav {
@@ -57,6 +65,10 @@ import logo from '../assets/logo.svg';
     margin: 0;
     font-weight: 500;
     letter-spacing: -0.7px;
+  }
+
+  a {
+    color: inherit;
   }
 
   svg {
